@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기아대책 주제변경 최나연</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(function(){
+
+            var img = $('.logo').find('img'); //a 태그 안에서 img 태그 찾기
+            var img_off = img.attr('src'); //마우스 올리기 전 off 상태
+            var img_on = img_off.replace('logo2','logo1'); //off를 on으로 변경
+
+            $('.slider').bxSlider();
+
+            $(window).scroll(function(){
+
+                if($(this).scrollTop() > 100){
+                    $('header').addClass('header_s');
+                    img.attr('src', img_1);
+                } else{
+                    $('header').removeClass('header_s');
+                    img.attr('src', img_off);
+                }
+            });// 탑 스크롤 끝
+
+        })// 레디 끝
+    </script>
+</head>
+<body>
+    <div class="warp">
+        <header>
+            <div class="inner">
+                <div class="logo"><img src="imgs/logo.png" alt="logo"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#">어린이집소개</a></li>
+                        <li><a href="#">보육프로그램</a></li>
+                        <li><a href="#">사랑과평화 이야기</a></li>
+                        <li><a href="#">사랑과평화 소식</a></li>
+                        <li><a href="#">입학 및 운영방침</a></li>
+                        <!--clear-->
+                    </ul>
+                </nav>
+                <div class="util">
+                    <div><a href="#"><img src="imgs/search.png" alt="찾기"></a></div>
+                    <div><a href="#"><img src="imgs/mypage.png" alt="마이페이지"></a></div>
+                    <div><a href="#"><img src="imgs/more.png"alt="더보기"></a></div>
+                    <button>회원가입</button>
+                </div>
+                <!-- clear -->
+            </div>
+        </header>
+        <section class="main">
+            <div class="slider">
+                <div><img src="imgs/main.png" alt="메인이미지"></div>
+                <div><!--이미지 추가 작업--></div>
+            </div>
+        </section>
+        <section class="quick">
+            <div>
+                <img src="imgs/quick_1.png" alt="입소신청">
+                <div>
+                    <h4>입소신청</h4>
+                    <p>아이들이 편안한 어린이집</p>
+                    <p><a href="#">신청하기 ></a></p>
+                </div>
+            </div>
+            <div>
+                <img src="imgs/quick_2.png" alt="소식">
+                <div>
+                    <h4>사랑과 평화 소식</h4>
+                    <p>우리 아이 소식을 만나세요</p>
+                    <p><a href="#">확인하기 ></a></p>
+                </div>
+            </div>
+            <div>
+                <img src="imgs/quick_3.png" alt="프로그램">
+                <div>
+                    <h4>보육프로그램</h4>
+                    <p>보육프로그램을 확인하세요</p>
+                    <p><a href="#">확인하기 ></a></p>
+                </div>
+            </div>
+            <!-- clear -->
+        </section>
+        <section class="story">
+            <div class="inner">
+                <h1>수업 과정 소식</h1>
+                <div class="story_box">
+                    <div>
+                        <img src="imgs/img1.png" alt="이미지1"> 
+                        <h6>수업 진도</h6>
+                        <p>[미술] 2022년 상반기<br> 미술 수업 과정 보고서 </p>
+                    </div>
+                    <div>
+                        <img src="imgs/img2.png" alt="이미지2">
+                        <h6>놀이교실</h6>
+                        <p>찰흙으로 배웠던 수학<br> 기초 개념 </p>
+                    </div>
+                    <div>
+                        <img src="imgs/img1.png" alt="이미지1">
+                        <h6>수업 진도</h6>
+                        <p>[미술] 2022년 상반기<br> 미술 수업 과정 보고서 </p>
+                    </div>
+                    <div>
+                        <img src="imgs/img2.png" alt="이미지2">
+                        <h6>놀이교실</h6>
+                        <p>찰흙으로 배웠던 수학<br> 기초 개념 </p>
+                    </div>
+                    <!-- clear -->
+                </div>
+            </div>
+        </section>
+        <section class="management">
+            <img src="imgs/submain.png" alt="서브메인">
+        </section>
+        <section class="campaign">
+            <div class="inner">
+                <h1>교사 이야기</h1>
+                <h3><span>교사들이 전하는</span> 아이들의 이야기를 확인하세요</h3>
+                <div class="cam_box">
+                    <div>
+                        <img src="imgs/img5.png" alt="교사1">
+                        <h3>가정통신문</h3>
+                        <div class="ic_heart">
+                            <img src="imgs/ic_heart.png" alt="하트아이콘">
+                            <p>확인하기</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imgs/img5.png" alt="교사2">
+                        <h3>아이들 원내 생활이야기</h3>
+                        <div class="ic_heart">
+                            <img src="imgs/ic_heart.png" alt="하트아이콘">
+                            <p>확인하기</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imgs/img5.png" alt="교사3">
+                        <h3>가정에서 도움되는 교육법</h3>
+                        <div class="ic_heart">
+                            <img src="imgs/ic_heart.png" alt="하트아이콘">
+                            <p>확인하기</p>
+                        </div>
+                    </div>
+                    <!-- clear -->
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="top_f">
+                <div class="inner">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">ENG</a></li>
+                        <!-- clear -->
+                    </ul>
+                    <div class="select_set">
+                        <select>
+                            <option>FH Federation</option>
+                            <option>사랑과평화어린이집</option>
+                        </select>
+                        <select>
+                            <option>Family Site</option>
+                            <option>부산시교육청</option>
+                        </select>
+                    </div>
+                    <!-- clear -->
+                </div>
+            </div>
+            <div class="bottom_f">
+                <div class="inner">
+                    <p>부산광역시 라온구 라온동 행복대로 107 사랑과평화어린이집 </p>
+                    <p>사랑과평화어린이집</p>
+                    <p>원장 어사평</p>
+                    <button>사단법인 사업자등록증</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="side">
+        <a href="#"><img src="imgs/icon_app.png"></a>
+    </div>
+</body>
+</html>
